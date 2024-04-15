@@ -5,9 +5,13 @@ export default function ThumbPodcast({ podcast }: { podcast: PodcastObject }) {
   const { id, image, title, author } = podcast;
   return (
     <Link to={`/podcast/${id}`}>
-      <figure>
-        <img src={image} alt={`Podcast ${title} image`} />
-        <figcaption>
+      <figure className="thumbPodcast">
+        <img
+          className="thumbPodcastImage"
+          src={image}
+          alt={`Podcast ${title} image`}
+        />
+        <figcaption className="thumbPodcastFigcaption">
           <h4>{title}</h4>
           <p>Author: {author}</p>
         </figcaption>

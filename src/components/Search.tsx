@@ -22,6 +22,7 @@ export default function Search({ setFilteredPodcasts }: Props) {
       type="text"
       placeholder="Search podcasts"
       onChange={(e) => handleChange(e.target.value)}
+      className="search"
     />
   );
 }

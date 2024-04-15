@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import { Route, Routes } from 'react-router-dom';
 import Main from './pages/Main';
 import Header from './components/Header';
@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { fetchPodcasts } from './services/podcasts/fetchPodcasts';
 import { usePodcastsData } from './hooks/usePodcastsData';
 import moment from 'moment';
+// import useLocalStorage from './hooks/useLocalStorage';
 
 function App() {
   const { setPodcastsData } = usePodcastsData();
@@ -38,7 +39,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="App">
+      <main className="App container">
         <Routes>
           <Route index path="/" element={<Main />} />
           <Route path="/podcast/:podcastId">
