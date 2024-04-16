@@ -16,6 +16,16 @@ a:hover {
   width: 100%;
 }
 
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 2px;
+  box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 13%);
+}
+
 .flex {
   display: flex;
 }
@@ -56,6 +66,7 @@ a:hover {
   gap: 20px
 }
 
+/* Main view */
 
 /* Main SearchBar */
 .badge {
@@ -77,8 +88,6 @@ a:hover {
 
 /* Main Thumbpodcast container */
 .thumbPodcastContainer {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -99,8 +108,6 @@ a:hover {
 }
 
 .thumbPodcastFigcaption {
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 13%);
   margin-top: -45px;
   padding: 40px 20px 20px;
   text-align: center;
@@ -113,4 +120,103 @@ a:hover {
 
 .thumbPodcastFigcaption p {
   font-size: 0.8rem;
+}
+
+
+/* Podcast view */
+.podcastContiner {
+  gap: 60px;
+}
+
+/* Podcast Aside */
+.asidePodcast {
+  max-width: 240px;
+  height: fit-content;
+  padding: 20px;
+  margin-bottom: 20px;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.asideImage {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+
+.asideSection {
+  border-top: 1px solid #e8e8e8;
+}
+
+.asideSection h3 {
+  font-size: 1rem;
+  line-height: 1em;
+}
+
+.asideSection p {
+  font-size: 0.8rem;
+}
+
+/* Episodes List */
+.podcastContiner section {
+  width: 100%;
+}
+.counter {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.episodesList {
+  padding: 10px 15px;
+}
+
+.podcastContiner .col {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  min-height: 40px;
+  padding: 5px 20px;
+}
+
+.podcastContiner .titleCol {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.episodeCol {
+  transition: all .2s ease-in-out;
+}
+
+.episodeCol:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+
+.episodeCol:hover {
+ background-color: #ececec;
+}
+
+.podcastContiner .col a {
+  width: 100%;
+}
+
+a .episodeTitle {
+  color: #437abd;
+  font-weight: 500;
+}
+
+.episodeTitle {
+  flex: 1 0 70%;
+}
+
+.episodeData {
+  flex: 1 0 15%;
 }

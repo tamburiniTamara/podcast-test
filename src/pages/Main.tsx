@@ -19,7 +19,7 @@ export default function Main() {
         <span className="badge">{filteredPodcasts.length}</span>
         <Search setFilteredPodcasts={setFilteredPodcasts} />
       </SearchBar>
-      <section className="thumbPodcastContainer">
+      <section className="thumbPodcastContainer sectionContainer">
         {filteredPodcasts.map((podcast, key) => (
           <ThumbPodcast key={podcast?.id ?? key} podcast={podcast} />
         ))}

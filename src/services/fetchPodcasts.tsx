@@ -1,4 +1,5 @@
-import { formatPodcastObject } from '../../mappers/podcastMapper';
+import { PodcastObject } from '../interfaces/podcastsDataModel';
+import { formatPodcastObject } from '../mappers/podcastMapper';
 
 export async function fetchPodcasts() {
   try {
@@ -7,7 +8,9 @@ export async function fetchPodcasts() {
     );
     const data = await response.json();
 
-    return data?.feed?.entry?.map((podcast) => formatPodcastObject(podcast));
+    return data?.feed?.entry?.map((podcast: PodcastObject) =>
+      formatPodcastObject(podcast)
+    );
   } catch (error) {
     console.log('Error fetching the podcasts: ', error);
     return null;

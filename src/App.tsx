@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Podcast from './pages/Podcast';
 import PodcastEpisode from './pages/PodcastEpisode';
 import { useEffect } from 'react';
-import { fetchPodcasts } from './services/podcasts/fetchPodcasts';
+import { fetchPodcasts } from './services/fetchPodcasts';
 import { usePodcastsData } from './hooks/usePodcastsData';
 import moment from 'moment';
 // import useLocalStorage from './hooks/useLocalStorage';

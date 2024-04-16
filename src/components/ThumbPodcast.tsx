@@ -11,7 +11,7 @@ export default function ThumbPodcast({ podcast }: { podcast: PodcastObject }) {
           src={image}
           alt={`Podcast ${title} image`}
         />
-        <figcaption className="thumbPodcastFigcaption">
+        <figcaption className="thumbPodcastFigcaption card">
           <h4>{title}</h4>
           <p>Author: {author}</p>
         </figcaption>
