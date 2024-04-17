@@ -8,31 +8,21 @@ import { useEffect } from 'react';
 import { fetchPodcasts } from './services/fetchPodcasts';
 import { usePodcastsData } from './hooks/usePodcastsData';
 import moment from 'moment';
-// import useLocalStorage from './hooks/useLocalStorage';
+import { useStoragePodcasts } from './hooks/useStoragePodcasts';
 
 function App() {
   const { setPodcastsData } = usePodcastsData();
+  const storedPodcasts = useStoragePodcasts();
 
   useEffect(() => {
-    const localPodcasts = localStorage?.getItem('podcasts');
-    const localTimestamp = localStorage?.getItem('timestamp');
-
-    // TODO move to custom hook useStoragePodcasts
-    const hasLocalStorageData =
-      localPodcasts !== null && localTimestamp !== null;
-    const hours = 24;
-    const now = moment();
-    const up24hours =
-      hasLocalStorageData && now.diff(moment(localTimestamp), 'hours') > hours;
-
-    if (!hasLocalStorageData || up24hours) {
+    if (!storedPodcasts) {
       fetchPodcasts().then((data) => {
         setPodcastsData(data);
         localStorage.setItem('podcasts', JSON.stringify(data));
         localStorage.setItem('timestamp', moment().toISOString());
       });
     } else {
-      setPodcastsData(JSON.parse(localPodcasts));
+      setPodcastsData(storedPodcasts);
     }
   }, []);
 
