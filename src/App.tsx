@@ -17,7 +17,7 @@ function App() {
     const localPodcasts = localStorage?.getItem('podcasts');
     const localTimestamp = localStorage?.getItem('timestamp');
 
-    // TODO move to custom hook useLocalStorage
+    // TODO move to custom hook useStoragePodcasts
     const hasLocalStorageData =
       localPodcasts !== null && localTimestamp !== null;
     const hours = 24;

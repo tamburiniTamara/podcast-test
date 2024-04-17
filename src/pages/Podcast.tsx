@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchDetailPodcast } from '../services/fetchDetailPodcast';
 import { DetailPodcastObject } from '../interfaces/detailPodcastModel';
 import { useGetPodcast } from '../hooks/useGetPodcast';
 import PodcastAside from '../components/PodcastAside';
 import EpisodesList from '../components/EpisodesList';
+import { useGetDetailPodcast } from '../hooks/useGetDetailPodcast';
 
 export default function Podcast() {
   const { podcastId } = useParams<{ podcastId: string }>();
@@ -14,9 +14,7 @@ export default function Podcast() {
   >();
 
   useEffect(() => {
-    fetchDetailPodcast(podcastId!).then(
-      (data) => data && setDetailPodcast(data)
-    );
+    podcastId && setDetailPodcast(useGetDetailPodcast(podcastId));
   }, [podcastId]);
 
   return (
