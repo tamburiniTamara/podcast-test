@@ -13,6 +13,6 @@ export async function fetchDetailPodcast(id: string) {
     return formatDetailPodcastObject(podcastParsed);
   } catch (error) {
     console.log('Error fetching the details podcast: ', error);
-    return null;
+    return undefined;
   }
 }

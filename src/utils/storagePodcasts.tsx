@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-export function useStoragePodcasts() {
+export function storagePodcasts() {
   const localPodcasts = localStorage?.getItem(`podcast}`);
   const localTimestamp = localStorage?.getItem(`timestamp`);
   const hasLocalStoragePodcast =

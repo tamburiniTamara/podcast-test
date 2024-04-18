@@ -6,13 +6,13 @@ import Podcast from './pages/Podcast';
 import PodcastEpisode from './pages/PodcastEpisode';
 import { useEffect } from 'react';
 import { fetchPodcasts } from './services/fetchPodcasts';
-import { usePodcastsData } from './hooks/usePodcastsData';
+import { useAppContext } from './hooks/useAppContext';
 import moment from 'moment';
-import { useStoragePodcasts } from './hooks/useStoragePodcasts';
+import { storagePodcasts } from './utils/storagePodcasts';
 
 function App() {
-  const { setPodcastsData } = usePodcastsData();
-  const storedPodcasts = useStoragePodcasts();
+  const { setPodcastsData } = useAppContext();
+  const storedPodcasts = storagePodcasts();
 
   useEffect(() => {
     if (!storedPodcasts) {
@@ -24,7 +24,7 @@ function App() {
     } else {
       setPodcastsData(storedPodcasts);
     }
-  }, []);
+  }, [storedPodcasts]);
 
   return (
     <>

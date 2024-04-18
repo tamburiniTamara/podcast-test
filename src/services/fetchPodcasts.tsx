@@ -13,6 +13,6 @@ export async function fetchPodcasts() {
     );
   } catch (error) {
     console.log('Error fetching the podcasts: ', error);
-    return null;
+    return undefined;
   }
 }
