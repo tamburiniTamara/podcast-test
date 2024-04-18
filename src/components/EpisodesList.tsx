@@ -19,18 +19,25 @@ export default function EpisodesList({
           <span className="episodeData">Date</span>
           <span className="episodeData">Duration</span>
         </li>
-        {podcastEpisodes?.map((episode) => {
-          const { id, title, date, duration } = episode;
-          return (
-            <li key={id} className="episodeCol col">
-              <Link className="flex" to={`/podcast/${podcastId}/episode/${id}`}>
-                <span className="episodeTitle">{title}</span>
-                <span className="episodeData">{date.toString()}</span>
-                <span className="episodeData">{duration.toString()}</span>
-              </Link>
-            </li>
-          );
-        })}
+        {podcastEpisodes ? (
+          podcastEpisodes.map((episode) => {
+            const { id, title, date, duration } = episode;
+            return (
+              <li key={id} className="episodeCol col">
+                <Link
+                  className="flex"
+                  to={`/podcast/${podcastId}/episode/${id}`}
+                >
+                  <span className="episodeTitle">{title}</span>
+                  <span className="episodeData">{date.toString()}</span>
+                  <span className="episodeData">{duration.toString()}</span>
+                </Link>
+              </li>
+            );
+          })
+        ) : (
+          <h2>There are no episodes available</h2>
+        )}
       </ul>
     </section>
   );
