@@ -9,9 +9,8 @@ export default function PodcastEpisode() {
     podcastId: string;
     episodeId: string;
   }>();
-  const podcastData = podcastId && useGetPodcast(podcastId);
-  const episodeData =
-    podcastId && episodeId && useGetEpisode(podcastId, episodeId);
+  const podcastData = useGetPodcast(podcastId ?? '');
+  const episodeData = useGetEpisode(podcastId ?? '', episodeId ?? '');
 
   return (
     <section className="sectionContainer podcastContiner flex gap-20">

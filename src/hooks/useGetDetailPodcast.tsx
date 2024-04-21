@@ -8,7 +8,7 @@ export function useGetDetailPodcast(
   podcastId: string
 ): DetailPodcastObject | undefined {
   const [data, setData] = useState<DetailPodcastObject | undefined>();
-  const storedPodcast = podcastId && storagePodcast(podcastId);
+  const storedPodcast = storagePodcast(podcastId);
 
   useEffect(() => {
     if (!storedPodcast && podcastId) {

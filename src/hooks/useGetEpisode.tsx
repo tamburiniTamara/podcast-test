@@ -1,7 +1,7 @@
 import { useGetDetailPodcast } from './useGetDetailPodcast';
 
 export function useGetEpisode(podcastId: string, episodeId: string) {
-  const detailPodcast = podcastId && useGetDetailPodcast(podcastId);
+  const detailPodcast = useGetDetailPodcast(podcastId);
 
   const episode =
     detailPodcast &&

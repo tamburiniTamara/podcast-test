@@ -7,13 +7,11 @@ import { useIsLoading } from '../hooks/useIsLoading';
 
 export default function Podcast() {
   const { podcastId } = useParams<{ podcastId: string }>();
-  const podcastData = podcastId && useGetPodcast(podcastId);
-  const detailPodcast = podcastId && useGetDetailPodcast(podcastId);
+  const podcastData = useGetPodcast(podcastId ?? '');
+  const detailPodcast = useGetDetailPodcast(podcastId ?? '');
+  const isLoading = (detailPodcast?.podcastEpisodes?.length || 0) > 0;
 
-  // TODO
-  // useIsLoading(detailPodcast?.podcastEpisodes?.length > 0);
-
-  // console.log('detailPodcast', detailPodcast);
+  useIsLoading(isLoading);
 
   return (
     <section className="sectionContainer podcastContiner flex gap-20">
