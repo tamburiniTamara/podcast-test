@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Search from '../components/Search';
 import SearchBar from '../components/SearchBar';
 import ThumbPodcast from '../components/ThumbPodcast';
 import { useAppContext } from '../hooks/useAppContext';
@@ -18,10 +17,10 @@ export default function Main() {
 
   return (
     <>
-      <SearchBar>
-        <span className="badge">{filteredPodcasts.length}</span>
-        <Search setFilteredPodcasts={setFilteredPodcasts} />
-      </SearchBar>
+      <SearchBar
+        podcastsCount={filteredPodcasts.length}
+        setFilteredPodcasts={setFilteredPodcasts}
+      />
       <section className="thumbPodcastContainer sectionContainer">
         {filteredPodcasts.map((podcast, key) => (
           <ThumbPodcast key={podcast?.id ?? key} podcast={podcast} />
