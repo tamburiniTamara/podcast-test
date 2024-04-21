@@ -1,8 +1,12 @@
 import moment from 'moment';
 
-export function storagePodcasts() {
-  const localPodcasts = localStorage?.getItem(`podcast}`);
-  const localTimestamp = localStorage?.getItem(`timestamp`);
+export function storagePodcasts(podcastId?: string) {
+  const keyPrefix = podcastId ? `-${podcastId}` : '';
+  const podcastKey = `podcast${keyPrefix}`;
+  const timestampKey = `timestamp${keyPrefix}`;
+  const localPodcasts = localStorage?.getItem(podcastKey);
+  const localTimestamp = localStorage?.getItem(timestampKey);
+
   const hasLocalStoragePodcast =
     localPodcasts !== null && localTimestamp !== null;
   const up24hours =

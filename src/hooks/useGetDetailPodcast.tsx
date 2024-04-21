@@ -1,4 +1,4 @@
-import { storagePodcast } from '../utils/storagePodcast';
+import { storagePodcasts } from '../utils/storagePodcasts';
 import { fetchDetailPodcast } from '../services/fetchDetailPodcast';
 import moment from 'moment';
 import { useEffect, useState } from 'react';
@@ -8,7 +8,7 @@ export function useGetDetailPodcast(
   podcastId: string
 ): DetailPodcastObject | undefined {
   const [data, setData] = useState<DetailPodcastObject | undefined>();
-  const storedPodcast = storagePodcast(podcastId);
+  const storedPodcast = storagePodcasts(podcastId);
 
   useEffect(() => {
     if (!storedPodcast && podcastId) {
