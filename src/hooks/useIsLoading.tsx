@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import { useAppContext } from './useAppContext';
+import { useLoadingContext } from './useLoadingContext';
 
 export function useIsLoading(difference: boolean) {
-  const appContext = useAppContext();
+  const loadingContext = useLoadingContext();
 
   useEffect(() => {
     const isLoaded = difference;
-    appContext?.setLoading(!isLoaded);
+    loadingContext?.setLoading(!isLoaded);
   }, [difference]);
 }

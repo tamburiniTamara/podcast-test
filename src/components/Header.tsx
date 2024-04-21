@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { useAppContext } from '../hooks/useAppContext';
+import { useLoadingContext } from '../hooks/useLoadingContext';
 
 export default function Header() {
-  const { loading } = useAppContext();
+  const { loading } = useLoadingContext();
 
   return (
     <header className="header sectionContainer">
