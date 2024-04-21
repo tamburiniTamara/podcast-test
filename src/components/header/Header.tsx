@@ -1,5 +1,6 @@
+import './Header.css';
 import { Link } from 'react-router-dom';
-import { useLoadingContext } from '../hooks/useLoadingContext';
+import { useLoadingContext } from '../../hooks/useLoadingContext';
 
 export default function Header() {
   const { loading } = useLoadingContext();

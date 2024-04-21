@@ -1,0 +1,28 @@
+/* Podcast Aside */
+.asidePodcast {
+  max-width: 240px;
+  height: fit-content;
+  padding: 20px;
+  margin-bottom: 20px;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.asideImage {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+
+.asideSection {
+  border-top: 1px solid #e8e8e8;
+}
+
+.asideSection h3 {
+  font-size: 1rem;
+  line-height: 1em;
+}
+
+.asideSection p {
+  font-size: 0.8rem;
+}

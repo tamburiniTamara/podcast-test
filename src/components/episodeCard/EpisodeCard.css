@@ -1,0 +1,15 @@
+/* Episode Card */
+.episodeCard {
+  height: fit-content;
+  padding: 20px;
+}
+
+.episodeCard a {
+  color: #437abd;
+  font-weight: 400;
+}
+
+.podcastAudio {
+  width: 100%;
+  margin-top: 20px;
+}

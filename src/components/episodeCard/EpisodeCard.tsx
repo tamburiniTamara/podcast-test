@@ -1,6 +1,7 @@
+import './EpisodeCard.css';
 import { Interweave } from 'interweave';
 import { EmailMatcher, UrlMatcher } from 'interweave-autolink';
-import { EpisodePodcastObject } from '../interfaces/detailPodcastModel';
+import { EpisodePodcastObject } from '../../interfaces/detailPodcastModel';
 
 export default function EpisodeCard({
   episodeData

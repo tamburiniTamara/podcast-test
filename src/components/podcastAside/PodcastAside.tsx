@@ -1,4 +1,5 @@
-import { PodcastObject } from '../interfaces/podcastsDataModel';
+import './PodcastAside.css';
+import { PodcastObject } from '../../interfaces/podcastsDataModel';
 
 export default function PodcastAside({ data }: { data: PodcastObject }) {
   const { image, title, author, description } = data;

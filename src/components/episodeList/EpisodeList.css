@@ -1,0 +1,64 @@
+/* Episodes List */
+.episodeListContainer {
+  width: 100%;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.episodesList {
+  padding: 10px 15px;
+}
+
+.episodeListContainer .col {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  min-height: 40px;
+  padding: 5px 20px;
+}
+
+.episodeListContainer .titleCol {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.episodeCol {
+  transition: all .2s ease-in-out;
+}
+
+.episodeCol:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+
+.episodeCol:hover {
+  background-color: #ececec;
+}
+
+.episodeListContainer .col a {
+  width: 100%;
+}
+
+a .episodeTitle {
+  color: #437abd;
+  font-weight: 500;
+}
+
+.episodeTitle {
+  flex: 1 0 70%;
+}
+
+.episodeData {
+  flex: 1 0 15%;
+}

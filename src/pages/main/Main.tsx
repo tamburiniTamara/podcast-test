@@ -1,9 +1,10 @@
+import './Main.css';
 import { useEffect, useState } from 'react';
-import SearchBar from '../components/SearchBar';
-import ThumbPodcast from '../components/ThumbPodcast';
-import { useAppContext } from '../hooks/useAppContext';
-import { PodcastObject } from '../interfaces/podcastsDataModel';
-import { useIsLoading } from '../hooks/useIsLoading';
+import SearchBar from '../../components/searchBar/SearchBar';
+import ThumbPodcast from '../../components/thumbPodcast/ThumbPodcast';
+import { useAppContext } from '../../hooks/useAppContext';
+import { PodcastObject } from '../../interfaces/podcastsDataModel';
+import { useIsLoading } from '../../hooks/useIsLoading';
 
 export default function Main() {
   const { podcastsData } = useAppContext();

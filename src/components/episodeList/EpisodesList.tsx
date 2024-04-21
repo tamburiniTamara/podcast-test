@@ -1,5 +1,6 @@
+import './EpisodeList.css';
 import { Link } from 'react-router-dom';
-import { DetailPodcastObject } from '../interfaces/detailPodcastModel';
+import { DetailPodcastObject } from '../../interfaces/detailPodcastModel';
 
 export default function EpisodesList({
   podcastId,
@@ -11,7 +12,7 @@ export default function EpisodesList({
   const { podcastEpisodes, episodesCount } = data;
 
   return (
-    <section>
+    <section className="episodeListContainer">
       <div className="counter card">Episodes: {episodesCount}</div>
       <ul role="table" className="card episodesList">
         <li className="titleCol col">

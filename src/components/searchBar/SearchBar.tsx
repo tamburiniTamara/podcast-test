@@ -1,5 +1,6 @@
-import { PodcastObject } from '../interfaces/podcastsDataModel';
-import { podcastsMatcher } from '../utils/podcastsMatcher';
+import './SearchBar.css';
+import { PodcastObject } from '../../interfaces/podcastsDataModel';
+import { podcastsMatcher } from '../../utils/podcastsMatcher';
 
 interface Props {
   podcastsCount: number;

@@ -1,0 +1,31 @@
+/* Main Thumbpodcast container */
+
+.thumbPodcast {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.thumbPodcastImage {
+  width: 120px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.thumbPodcastFigcaption {
+  margin-top: -45px;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.thumbPodcastFigcaption h4 {
+  font-size: 1rem;
+  line-height: 1em;
+}
+
+.thumbPodcastFigcaption p {
+  font-size: 0.8rem;
+}

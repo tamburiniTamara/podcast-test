@@ -1,5 +1,6 @@
+import './ThumbPodcast.css';
 import { Link } from 'react-router-dom';
-import { PodcastObject } from '../interfaces/podcastsDataModel';
+import { PodcastObject } from '../../interfaces/podcastsDataModel';
 
 export default function ThumbPodcast({ podcast }: { podcast: PodcastObject }) {
   const { id, image, title, author } = podcast;

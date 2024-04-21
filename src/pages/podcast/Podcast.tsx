@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { useGetPodcast } from '../hooks/useGetPodcast';
-import PodcastAside from '../components/PodcastAside';
-import EpisodesList from '../components/EpisodesList';
-import { useGetDetailPodcast } from '../hooks/useGetDetailPodcast';
-import { useIsLoading } from '../hooks/useIsLoading';
+import { useGetPodcast } from '../../hooks/useGetPodcast';
+import PodcastAside from '../../components/podcastAside/PodcastAside';
+import EpisodesList from '../../components/episodeList/EpisodesList';
+import { useGetDetailPodcast } from '../../hooks/useGetDetailPodcast';
+import { useIsLoading } from '../../hooks/useIsLoading';
 
 export default function Podcast() {
   const { podcastId } = useParams<{ podcastId: string }>();
@@ -14,7 +14,7 @@ export default function Podcast() {
   useIsLoading(isLoading);
 
   return (
-    <section className="sectionContainer podcastContiner flex gap-20">
+    <section className="sectionContainer flex gap-60">
       {podcastData && <PodcastAside data={podcastData} />}
       {detailPodcast && podcastId && (
         <EpisodesList data={detailPodcast} podcastId={podcastId} />

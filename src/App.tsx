@@ -1,9 +1,9 @@
 import './styles/App.css';
 import { Route, Routes } from 'react-router-dom';
-import Main from './pages/Main';
-import Header from './components/Header';
-import Podcast from './pages/Podcast';
-import PodcastEpisode from './pages/PodcastEpisode';
+import Main from './pages/main/Main';
+import Header from './components/header/Header';
+import Podcast from './pages/podcast/Podcast';
+import PodcastEpisode from './pages/podcast/podcastEpisode/PodcastEpisode';
 import { useEffect } from 'react';
 import { fetchPodcasts } from './services/fetchPodcasts';
 import { useAppContext } from './hooks/useAppContext';
