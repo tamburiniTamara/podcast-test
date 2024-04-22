@@ -1,31 +1,53 @@
 # Podcast app
 
-Podcast SPA to listen music podcasts.
+Podcast SPA for listening the 100 best podcast on iTunes.
 
-## Available Scripts
+Search the podcast that you like and enjoy listening their last episodes.
 
-In the project directory, you can run:
+As server side, we are using localStorage after fetching the data for providing a better user experience.
 
-### `npm start`
+## Run locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+  git clone https://github.com/tamburiniTamara/podcast-test.git
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Go to the project directory
 
-### `npm test`
+```bash
+  cd podcasts
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependencies
 
-### `npm run build`
+```bash
+  npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run build
+  npm run start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
